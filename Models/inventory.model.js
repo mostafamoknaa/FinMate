@@ -6,7 +6,8 @@ const inventorySchema = new mongoose.Schema({
     category: { type: String },
     stock: { type: Number, default: 0 },
     reorder: { type: Number, default: 0 },
-    supplier: { type: mongoose.Schema.Types.ObjectId, ref: "Supplier" }
+    supplier: { type: mongoose.Schema.Types.ObjectId, ref: "Supplier" },
+    image: { type: String },
 }, { timestamps: true });
 
 export default mongoose.model("Inventory", inventorySchema);
